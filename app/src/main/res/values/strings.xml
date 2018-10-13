@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MovieApp</string>
+    <string name="action_settings">Search Preferences</string>
+    <string name="action_popular">Popular Titles</string>
+    <string name="action_money">Highest User Rating</string>
+    <string name="action_favorites">Favorites</string>
+    <string name="title_activity_detail">Detail</string>
+    <string name="title_activity_detail_sheet">DetailSheet</string>
+    <string name="player_error">Error initializing YouTube player: %s</string>
+    <string name="seek_to">Jump To</string>
+    <string name="seek_to_hint">Seconds</string>
+    <string name="favorite">favorite</string>
+    <string name="reviews">reviews</string>
+
+</resources>

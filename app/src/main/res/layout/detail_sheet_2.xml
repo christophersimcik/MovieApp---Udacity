@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/heading">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/title_header"
+        android:textAlignment="viewStart"
+        android:paddingTop="5dp"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="5dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:layout_gravity="top"
+        android:layout_alignParentLeft="true"/>
+
+    </RelativeLayout>
+
+
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:id="@+id/mid"
+     android:layout_below="@+id/heading"
+     android:layout_alignParentBottom="false"
+     android:layout_centerInParent="true">
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="187.5dp"
+            android:id="@+id/mid_contents"
+            android:orientation="horizontal"
+            android:layout_alignParentLeft="true">
+
+            <ImageView
+        android:layout_width="125dp"
+        android:layout_height="187.5dp"
+        android:id="@+id/poster"
+        android:layout_alignParentLeft="true"
+        android:baselineAlignBottom="false"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top">
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="New Text"
+          android:id="@+id/synopsis"
+          android:layout_centerHorizontal="true"
+          android:paddingLeft="16dp"
+          android:paddingRight="16dp"
+          android:textSize="16sp"
+          android:gravity="left|top"
+          android:paddingTop="5dp"
+          android:paddingBottom="5dp"/>
+
+      <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+
+              android:id="@+id/asterix_button"
+              android:scaleType="fitXY"
+              android:contentDescription="@string/favorite"
+              android:layout_marginLeft="20dp"
+              android:layout_marginTop="20dp"
+              android:layout_marginBottom="10dp" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical|left"
+              android:textSize="16dp"
+              android:paddingLeft="25dp"
+              android:id="@+id/favorite_text"
+              android:text=" Add to Favorites"
+              />
+      </LinearLayout>
+
+      <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/review_button"
+              android:scaleType="fitXY"
+              android:contentDescription="@string/reviews"
+              android:layout_marginLeft="20dp"
+              android:layout_marginTop="10dp" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical|left"
+              android:textSize="16dp"
+              android:paddingLeft="25dp"
+              android:id="@+id/review_text"
+              android:text="Get Reviews"
+              />
+      </LinearLayout>
+
+  </LinearLayout>
+
+
+            </ScrollView>
+
+
+
+        </LinearLayout>
+ </RelativeLayout>
+
+
+    <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:id="@+id/release_box"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentBottom="false"
+            android:layout_alignLeft="@+id/mid"
+            android:layout_below="@+id/mid"
+            android:gravity="left"
+            android:layout_alignParentLeft="false"
+            android:textAlignment="viewStart">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/release_year"
+            android:textAlignment="viewStart"
+            android:textSize="15sp"
+            android:paddingLeft="16dp"
+            android:paddingRight="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="left"
+            android:gravity="fill"
+            android:layout_alignParentStart="true" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:id="@+id/rating_box"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentBottom="false"
+            android:layout_toLeftOf="@+id/pie_box"
+            android:layout_below="@+id/mid"
+            android:gravity="right">
+            <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/avg_vote"
+            android:textAlignment="viewStart"
+            android:gravity="fill|right"
+            android:textSize="15sp"
+                android:layout_gravity="right"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentEnd="false"
+                android:paddingRight="10dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:id="@+id/pie_box"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentBottom="false"
+            android:layout_alignRight="@+id/mid"
+            android:layout_below="@+id/mid"
+            android:paddingRight="10dp">
+            <com.example.csimcik.movieapp.PieChartView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/pie_chart"
+                android:layout_gravity="right"
+                android:gravity="left"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                />
+            </RelativeLayout>
+
+
+</RelativeLayout>

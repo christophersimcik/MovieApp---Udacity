@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center|center_vertical|center_horizontal"
+    android:background="#000000">
+    <ImageView
+        android:id="@+id/youtube_thumbs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="3dp" />
+    <RelativeLayout android:id="@+id/relativeLayout_over_youtube_thumbnail"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+        <ImageView android:id="@+id/btnYoutube_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@mipmap/play_button"
+            android:layout_alignParentEnd="false"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentStart="false"
+            android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/youtube_thumbnail"
+        android:layout_toLeftOf="@+id/btnYoutube_player"
+        android:layout_toStartOf="@+id/btnYoutube_player"></LinearLayout>
+
+
+</RelativeLayout>
+

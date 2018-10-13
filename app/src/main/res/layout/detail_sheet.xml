@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/heading">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/title_header"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:paddingTop="5dp"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="5dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="top"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="0dp" />
+    </RelativeLayout>
+
+
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="375dp"
+     android:id="@+id/mid"
+     android:layout_below="@+id/heading">
+
+
+     <HorizontalScrollView
+    android:id="@+id/detail_relative"
+    android:layout_width="wrap_content"
+    android:layout_height="375dp"
+    android:orientation="horizontal"
+         android:layout_marginBottom="0dp"
+         android:scrollIndicators="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="375dp"
+            android:id="@+id/mid_contents"
+            android:orientation="horizontal">
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="375dp"
+        android:id="@+id/poster"
+        android:layout_gravity="center|left"
+        android:baselineAlignBottom="false"
+        android:paddingTop="10dp" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/synopsis"
+        android:layout_gravity="center|right"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textSize="16sp"
+        android:gravity="left|top"
+        android:paddingTop="10dp" />
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/asterix_button"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/favorite"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+            android:textSize="16dp"
+            android:paddingLeft="25dp"
+            android:id="@+id/favorite_text"
+            android:text=" Add to Favorites"
+            />
+    </LinearLayout>
+</FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/revbut"
+                android:id="@+id/review_button"
+                android:scaleType="fitXY"
+                android:contentDescription="@string/reviews"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:textSize="16dp"
+                android:paddingLeft="25dp"
+                android:id="@+id/review_text"
+                android:text="Get Reviews"
+                />
+    </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>
+
+
+        </LinearLayout>
+
+
+</HorizontalScrollView>
+ </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/release_year"
+            android:textAlignment="viewStart"
+            android:gravity="center_horizontal|left"
+            android:textSize="15sp"
+            android:paddingLeft="16dp"
+            android:paddingRight="0dp"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="false"
+            android:layout_gravity="left"
+            android:layout_alignLeft="@+id/mid"
+            android:layout_below="@+id/mid"
+            android:layout_marginTop="20dp" />
+
+            <TextView
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:id="@+id/avg_vote"
+            android:textAlignment="viewEnd"
+            android:gravity="center_horizontal|right"
+            android:textSize="15sp"
+            android:paddingRight="16dp"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="false"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/mid"
+                android:layout_toLeftOf="@+id/pie_chart"
+                android:layout_marginTop="20dp" />
+
+            <com.example.csimcik.movieapp.PieChartView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/pie_chart"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentRight="false"
+                android:layout_gravity="center_horizontal|right"
+                android:layout_alignRight="@+id/mid"
+                android:layout_below="@+id/mid"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp" />
+
+
+
+
+
+</RelativeLayout>
